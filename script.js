@@ -24,13 +24,13 @@ const songs = [
     title: "Dreaming",
     name: "Han Hee Jung / K-Indie · Ballad",
     source: "Dreaming.mp3",
-    description: "Current fave ko ‘to, lagi kong pinapakinggan sa jeep while thinking about life or romanticizing moments. Hindi ko maintindihan lahat ng lyrics, pero the calming piano and gentle vocals make it perfect to zone out and relax. Sobrang chill, parang kasama mo siya sa quiet moments.",
+    description: "Current fave ko ‘to, lagi kong pinapakinggan sa jeep while thinking about life or romanticizing moments. Hindi ko maintindihan  yung lyrics, pero the calming piano and gentle vocals make it perfect to zone out and relax. Sobrang chill, parang kasama mo siya sa quiet moments.",
   },
   {
     title: "I Love You, I'm Sorry",
     name: "Gracie Abrams / Indie Pop",
     source: "ILoveYou,I'mSorry.mp3",
-    description: "Second all-time fave ko 'to. Parang pag iniwan ako ng partner, expect na naka auto replay 'to sa isip ko. Raw and honest ang lyrics, tapos Gracie’s soft voice makes the pain real pero comforting din. Pinili ko siya kasi perfect sa love, regret, and vulnerability na feeling to the point na f na f talaga.",
+    description: "Second all-time fave ko 'to. Parang pag iniwan ako ng partner, expect na naka auto replay 'to sa isip ko. Raw and honest ang lyrics, tapos Gracie’s soft voice makes the pain real pero comforting din. Pinili ko 'to sha kasi perfect sa love, regret, and vulnerability na feeling to the point na f na f talaga.",
   },
   {
     title: "Somebody's Pleasure",
