@@ -30,7 +30,7 @@ const songs = [
     title: "I Love You, I'm Sorry",
     name: "Gracie Abrams / Indie Pop",
     source: "ILoveYou,I'mSorry.mp3",
-    description: "Second all-time fave ko ito. Parang pag iniwan ako ng partner, expect na naka auto replay 'to sa isip ko. Raw and honest ang lyrics, tapos Gracie’s soft voice makes the pain real pero comforting din. Pinili ko siya kasi perfect sa love, regret, and vulnerability na feeling na f na f talaga.",
+    description: "Second all-time fave ko 'to. Parang pag iniwan ako ng partner, expect na naka auto replay 'to sa isip ko. Raw and honest ang lyrics, tapos Gracie’s soft voice makes the pain real pero comforting din. Pinili ko siya kasi perfect sa love, regret, and vulnerability na feeling to the point na f na f talaga.",
   },
   {
     title: "Somebody's Pleasure",
