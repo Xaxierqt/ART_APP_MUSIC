@@ -62,6 +62,11 @@ body {
   -webkit-box-reflect: below -5px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
   pointer-events: none;
   user-select: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.06);
 }
 
 /* REMOVE or COMMENT OUT this block: */
@@ -167,6 +172,7 @@ body {
   border-radius: 4px;
   margin: 32px 0 24px;
   cursor: pointer;
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #progress::-webkit-slider-thumb {
@@ -216,4 +222,55 @@ body {
 
 .controls button:nth-child(2):is(:hover, :focus-visible) {
   transform: scale(1.25);
+}
+
+.swiper-slide img,
+.swiper-slide .overlay {
+  will-change: transform, opacity, backdrop-filter;
+}
+
+.intro-modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(20, 20, 30, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-content {
+  background: #23223a;
+  color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 90vw;
+  width: 400px;
+  text-align: center;
+  font-size: 1.08rem;
+}
+
+.intro-content h2 {
+  margin-bottom: 0.7em;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.intro-content button {
+  margin-top: 1.5em;
+  padding: 0.7em 2em;
+  background: linear-gradient(90deg, #ffb347 0%, #ff5e62 100%);
+  color: #23223a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.intro-content button:hover {
+  background: linear-gradient(90deg, #ff5e62 0%, #ffb347 100%);
+  color: #fff;
 }
