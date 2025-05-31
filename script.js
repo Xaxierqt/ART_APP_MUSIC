@@ -36,7 +36,7 @@ const songs = [
     title: "Somebody's Pleasure",
     name: "Aziz Hedra / R&B · Soul",
     source: "Somebody'sPleasure.mp3",
-    description: "This is my all-time favorite — mula simula hanggang end, every lyric hits right. Aziz’s raw voice and the soulful beat are perfect kapag feeling deep and reflective. The extended version lets me fully soak in the emotions, parang it's me n music.",
+    description: "This is my all-time favorite — from the start 'til the end, every lyric hits right. Aziz’s raw voice and the soulful beat are perfect kapag feeling deep and reflective. The extended version lets me fully soak in the emotions, parang it's me n music.",
   },
 ];
 
