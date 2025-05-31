@@ -9,10 +9,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script defer src="script.js"></script>
+  <style>
+    .swiper-slide .overlay {
+  pointer-events: none;
+}
+.swiper-slide.show-desc .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+  </style>
 </head>
 <body>
+  <div id="intro-modal" class="intro-modal">
+    <div class="intro-content">
+      <h2>Welcome!</h2>
+      <p>
+        This project was created by Jhustyn Ferrer, BSIT 241B, for academic purposes.<br><br>
+        Each song entry is interactive — simply <b>click the image</b> to reveal its corresponding description. All song descriptions are scrollable, allowing you to explore each write-up fully and at your own pace.
+      </p>
+      <button id="close-intro">Got it!</button>
+    </div>
+  </div>
+
     <div class="album-cover">
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -62,5 +80,6 @@
         </button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
