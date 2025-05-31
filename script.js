@@ -12,31 +12,31 @@ const songs = [
     title: "Sundo",
     name: "Imago / Alternative Rock · OPM",
     source: "Sundo.mp3",
-    description: "Genre: Alternative Rock / OPM\nI chose this because kahit hindi ako laging sad, the song fits that chill, “okay lang mag-senti kahit walang reason” vibe. The music sounds gentle pero emotional, parang may naghahanap sa’yo, tapos finally, you’re found. It’s usually my go-to kapag gusto ko mag-reflect or just vibe at night.",
+    description: "I chose this because kahit hindi ako laging sad, the song fits that chill, “okay lang mag-senti kahit walang reason” vibe. The music sounds gentle pero emotional, parang may naghahanap sa’yo, tapos finally, you’re found. It’s usually my go-to kapag gusto ko mag-reflect or just vibe at night.",
   },
   {
     title: "Cry",
     name: "Cigarettes After Sex / Dream Pop · Ambient",
     source: "Cry.mp3",
-    description: "Genre: Dream Pop / Ambient\nThis song is my mood whenever gusto kong malungkot — may ganun talaga na phases kahit anong mood mo. Chill tempo and soft vocals na parang lullaby pero may sadness na beautiful din. I chose it kasi top tier CAS, perfect kapag gusto mo mag-reflect deeply.",
+    description: "This song is my mood whenever gusto kong malungkot — may ganun talaga na phases kahit anong mood mo. Chill tempo and soft vocals na parang lullaby pero may sadness na beautiful din. I chose it kasi top tier CAS, perfect kapag gusto mo mag-reflect deeply.",
   },
   {
     title: "Dreaming",
     name: "Han Hee Jung / K-Indie · Ballad",
     source: "Dreaming.mp3",
-    description: "Genre: K-Indie / Ballad\nCurrent fave ko ‘to, lagi kong pinapakinggan sa jeep while thinking about life or romanticizing moments. Hindi ko maintindihan lahat ng lyrics, pero the calming piano and gentle vocals make it perfect to zone out and relax. Sobrang chill, parang kasama mo siya sa quiet moments.",
+    description: "Current fave ko ‘to, lagi kong pinapakinggan sa jeep while thinking about life or romanticizing moments. Hindi ko maintindihan lahat ng lyrics, pero the calming piano and gentle vocals make it perfect to zone out and relax. Sobrang chill, parang kasama mo siya sa quiet moments.",
   },
   {
     title: "I Love You, I'm Sorry",
     name: "Gracie Abrams / Indie Pop",
     source: "ILoveYou,I'mSorry.mp3",
-    description: "Genre: Indie Pop\nSecond all-time fave ko ito. Parang pag iniwan ako ng partner, expect na paulit-ulit ito sa isip ko. Raw and honest ang lyrics, tapos Gracie’s soft voice makes the pain real pero comforting din. Pinili ko siya kasi perfect sa love, regret, and vulnerability na feeling na f na f talaga.",
+    description: "Second all-time fave ko ito. Parang pag iniwan ako ng partner, expect na paulit-ulit ito sa isip ko. Raw and honest ang lyrics, tapos Gracie’s soft voice makes the pain real pero comforting din. Pinili ko siya kasi perfect sa love, regret, and vulnerability na feeling na f na f talaga.",
   },
   {
     title: "Somebody's Pleasure",
     name: "Aziz Hedra / R&B · Soul",
     source: "Somebody'sPleasure.mp3",
-    description: "Genre: R&B / Soul\nThis is my all-time favorite — mula simula hanggang end, every lyric hits right. Aziz’s raw voice and the soulful beat are perfect kapag feeling deep and reflective. The extended version lets me fully soak in the emotions, parang it's me n music.",
+    description: "This is my all-time favorite — mula simula hanggang end, every lyric hits right. Aziz’s raw voice and the soulful beat are perfect kapag feeling deep and reflective. The extended version lets me fully soak in the emotions, parang it's me n music.",
   },
 ];
 
@@ -122,10 +122,11 @@ document.querySelectorAll('.swiper-slide').forEach((slide, idx) => {
 var swiper = new Swiper(".swiper", {
   effect: "coverflow",
   centeredSlides: true,
-  initialSlide: 3, // Make sure this is 0-4
+  initialSlide: 3,
   slidesPerView: "auto",
   grabCursor: true,
   spaceBetween: 40,
+  speed: 600, // Smoother slide transition (ms)
   coverflowEffect: {
     rotate: 25,
     stretch: 0,
@@ -143,4 +144,24 @@ swiper.on("slideChange", () => {
   currentSongIndex = swiper.activeIndex;
   updateSongInfo();
   playPause();
+});
+
+// Intro modal logic
+document.getElementById('close-intro').onclick = function() {
+  document.getElementById('intro-modal').style.display = 'none';
+};
+
+document.querySelectorAll('.swiper-slide').forEach((slide) => {
+  slide.addEventListener('click', function(e) {
+    // Remove show-desc from all slides
+    document.querySelectorAll('.swiper-slide').forEach(s => s.classList.remove('show-desc'));
+    // Add to clicked slide
+    this.classList.add('show-desc');
+    e.stopPropagation();
+  });
+});
+
+// Hide description when clicking outside
+document.body.addEventListener('click', function() {
+  document.querySelectorAll('.swiper-slide').forEach(s => s.classList.remove('show-desc'));
 });
